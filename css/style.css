@@ -2,3 +2,34 @@
 
 /*  font-family: "Pixelify Sans", sans-serif;*/
 
+#options{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  
+}
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+#minutes,#seconds{
+    font-size: 50px;
+    font-family: 'Pixelify Sans';
+    
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+
+}
+
+#pauseAndPlay,#restart{
+   width: 80px;
+   height: 40px;
+}
