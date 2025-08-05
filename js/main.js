@@ -1,53 +1,60 @@
-let myTimer = null;
-let paraContagem = false;
 let clickCount = 0;
+let myCounter;
+let seconds = 0;
+let minutes = 0;
+let container = document.querySelector(".container")
+  
+function displayTimer()  { //função chamada ao apertar o botão
+  
 
-function contador() {
-  let minutes = 0;
-  let seconds = 0;
-  let limit = 15;
-  let container = document.querySelector(".container");
+  let timeLimit = 15;
 
-  myTimer = setInterval(tick, 1000);
+  clickCount ++;
 
-  function tick() {
-    if (paraContagem) {
-      clearInterval(myTimer);
-      console.log("Contador pausado");
-      return;
+    function tick() { // Contador
+    seconds++;
+    if (seconds >= 60){
+        minutes++;
+        seconds = 0;
     }
 
-    seconds++;
-    if (seconds >= 60) {
-      seconds = 0;
-      minutes++;
+    if (minutes >= timeLimit){
+      clearInterval(myCounter)
     }
 
     let secDisplay = seconds < 10 ? "0" + seconds : seconds;
     let minDisplay = minutes < 10 ? "0" + minutes : minutes;
 
-    container.innerHTML = `
-      <div id="minutes">${minDisplay}</div>
-      <div id="seconds">:${secDisplay}</div>
-    `;
-
-    if (minutes >= limit) {
-      clearInterval(myTimer);
-      console.log("Chega Chega");
+    container.innerHTML = `    
+    <div id="minutes"> ${minDisplay}:</div>
+    <div id="seconds"> ${secDisplay}</div>
+    `  
     }
+
+  if ( clickCount == 1){
+    console.log("primeiro clique")
+      myCounter = setInterval(tick, 1000);
+  }
+
+  if ( clickCount == 2){
+    console.log("segundo click")
+    clearInterval(myCounter)  
+    
+  }   
+  if (clickCount ==  3){
+     myCounter = setInterval(tick, 1000);
+    clickCount = 1;
   }
 }
 
-document.getElementById("pauseAndPlay").addEventListener("click", function () {
-  clickCount++;
+function restart(){
+  minutes = 0
+  seconds = 0
+  container.innerHTML = `    
+    <div id="minutes"> 00:</div>
+    <div id="seconds"> 00</div>
+    `  
+    
 
-  if (clickCount === 1) {
-    console.log("Contando");
-    paraContagem = false;
-    contador();
-  } else if (clickCount === 2) {
-    console.log("Pausou");
-    paraContagem = true;
-    clickCount = 0;
-  }
-});
+
+}
