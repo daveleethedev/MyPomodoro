@@ -4,16 +4,22 @@
 
 body{
 background-image: url('assets/wallpaper.gif');
+background-size: cover;
+background-attachment: fixed;
+background-position: center center;
 width: 100vw;
 height: 100vh;
 padding: 0px;
+overflow: hidden;
+ font-family: 'Pixelify Sans';
 }
 
 #hero{
-    background-image: linear-gradient(to bottom right, rgba(179, 179, 213, 0.305), rgba(12, 12, 62, 0.474),rgba(107, 107, 146, 0.255));
-    width: 100vw;
-    height: 90vh;
+    background-image: linear-gradient(to bottom right, rgba(35, 35, 82, 0.305), rgba(12, 12, 62, 0.474),rgba(78, 78, 143, 0.255));
+    width: 99vw;
+    height: 100vh;
     padding: 0px;
+    border-radius: 10px;
     margin: 0px;
 }
 
@@ -27,7 +33,12 @@ padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
     margin-top: 50px;
+    background-image: linear-gradient(to right bottom,rgba(48, 48, 126, 0.563), rgba(89, 89, 179, 0.618));
+    width: 400px;
+    border-radius: 30px;
+
 
 }
 
@@ -35,6 +46,7 @@ padding: 0px;
     font-size: 90px;
     font-family: 'Pixelify Sans';
     display: flex;
+    color: rgb(224, 201, 245);
 }
 
 #buttons{
@@ -43,12 +55,82 @@ padding: 0px;
     margin: 10px;
 }
 
-#pauseAndPlay,#restart{
-   width: 80px;
-   height: 40px;
-}
+
 
 #to-do{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+    width: 500px;
+    height: 350px;
+    background-color: rgba(18, 18, 174, 0.863);
+}
+
+
+
+#input-area{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+#add-item-btn{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: rgba(88, 130, 228, 0.629);
+    border-style: solid;
+    border-color: rgb(96, 120, 253);
+    color: white;
+    display: flex;
+    align-self: center;
     justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+#add-item-btn:hover{
+    background-color: rgb(11, 21, 108);
+    transition: 1s;
+}
+
+#list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: scroll;
+    padding: 5px;
+    margin: 10px;
+    
+    height: 700px;
+}
+#list::-webkit-scrollbar{
+    background-color: rgb(194, 194, 228);
+    border-radius: 10px;
+}
+
+
+#list-item{
+   
+    width: 400px;
+    height: 45px;
+    
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+     
+}
+
+#deleteBtn{
+    float: inline-end;
+    border-radius: 10px;
+    background-color: rgba(86, 116, 187, 0.525);
+    border-style: solid;
+    border-color: rgb(96, 120, 253);
+    color: white;
 }
