@@ -2,34 +2,53 @@
 
 /*  font-family: "Pixelify Sans", sans-serif;*/
 
+body{
+background-image: url('assets/wallpaper.gif');
+width: 100vw;
+height: 100vh;
+padding: 0px;
+}
+
+#hero{
+    background-image: linear-gradient(to bottom right, rgba(179, 179, 213, 0.305), rgba(12, 12, 62, 0.474),rgba(107, 107, 146, 0.255));
+    width: 100vw;
+    height: 90vh;
+    padding: 0px;
+    margin: 0px;
+}
+
 #options{
     display: flex;
     justify-content: center;
     padding: 10px;
-  
 }
-
-
 
 .container{
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
 }
 
 #minutes,#seconds{
-    font-size: 50px;
+    font-size: 90px;
     font-family: 'Pixelify Sans';
-    
+    display: flex;
 }
 
 #buttons{
     display: flex;
     justify-content: center;
     margin: 10px;
-
 }
 
 #pauseAndPlay,#restart{
    width: 80px;
    height: 40px;
+}
+
+#to-do{
+    display: flex;
+    justify-content: center;
 }
