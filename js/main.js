@@ -54,7 +54,5 @@ function restart(){
     <div id="minutes"> 00:</div>
     <div id="seconds"> 00</div>
     `  
-    
-
-
 }
+

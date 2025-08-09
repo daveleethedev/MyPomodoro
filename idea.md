@@ -14,3 +14,9 @@
 - Cores Personalizáveis
 - to-do list
 - pt-br, Inglês e Russo
+
+## Ricing:
+- Você escolhe o wallpaper que quiser
+- você escolhe a cor que quiser
+- você escolhe a fonte que quiser
+- Você escolhe o efeito sonoro que quiser

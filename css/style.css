@@ -15,12 +15,13 @@ overflow: hidden;
 }
 
 #hero{
-    background-image: linear-gradient(to bottom right, rgba(35, 35, 82, 0.305), rgba(12, 12, 62, 0.474),rgba(78, 78, 143, 0.255));
+    background-image: linear-gradient(to bottom right, rgba(35, 35, 82, 0.744), rgba(12, 12, 62, 0.645),rgba(78, 78, 143, 0.463));
     width: 99vw;
-    height: 100vh;
+    height: 98vh;
     padding: 0px;
     border-radius: 10px;
     margin: 0px;
+   
 }
 
 #options{
@@ -43,7 +44,7 @@ overflow: hidden;
 }
 
 #minutes,#seconds{
-    font-size: 90px;
+    font-size: 100px;
     font-family: 'Pixelify Sans';
     display: flex;
     color: rgb(224, 201, 245);
@@ -64,9 +65,9 @@ overflow: hidden;
     margin: auto;
     border-radius: 10px;
     padding: 10px;
-    width: 500px;
+    width: 600px;
     height: 350px;
-    background-color: rgba(18, 18, 174, 0.863);
+    background-image: linear-gradient(to right bottom,rgba(48, 48, 126, 0.621), rgba(89, 89, 179, 0.725));
 }
 
 
@@ -102,9 +103,9 @@ overflow: hidden;
     flex-direction: column;
     justify-content: center;
     overflow-y: scroll;
-    padding: 5px;
+    padding: 15px;
     margin: 10px;
-    
+  
     height: 700px;
 }
 #list::-webkit-scrollbar{
@@ -133,4 +134,17 @@ overflow: hidden;
     border-style: solid;
     border-color: rgb(96, 120, 253);
     color: white;
+}
+
+#config{
+    position: fixed;
+    background-color: rgb(3, 10, 51);
+    width: 700px;
+    height: 600px;
+    border-radius: 10px;
+    /*display: none;*/
+    margin: auto;
+
+    z-index: 10;
+    
 }
