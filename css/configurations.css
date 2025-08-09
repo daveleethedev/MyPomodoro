@@ -1,0 +1,128 @@
+#config{
+    position: fixed;
+    background-color: rgb(209, 211, 224);
+    width: 1200px;
+    height: 700px;
+    /* display: none; */
+
+    
+    border-radius: 10px;
+    
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+#closeButton{
+    float: inline-end;
+    margin: 10px;
+    
+}
+
+#left-nav{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100px;
+    height: 700px;
+    padding: 15px 15px -10px 15px;
+    margin: 0px 10px 0px 0px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#config-section{
+    padding: 10px;
+}
+
+.ln-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.config-options{
+    width: 1190px;
+    height: 670px;
+    border-radius: 0px 0px 10px 0px;
+}
+
+#sectOne{
+    background-color: rgb(222, 80, 80);
+    
+}
+
+#sectTwo{
+    background-color: blue;
+    display: none;
+}
+
+#sectThree{
+    background-color: brown;
+    display: none;
+}
+
+input[type="color"] {
+ 
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* Chrome, Edge, Safari */
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 8px;
+}
+
+/* Firefox */
+input[type="color"]::-moz-color-swatch {
+  border: none;
+  border-radius: 8px;
+}
+
+input[type="file"] {
+  display: none; /* esconde o real */
+}
+
+.file-label {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #1e90ff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.file-label:hover {
+  background: #187bcd;
+}
+
+#applyBtn {
+  padding: 8px 16px;
+  margin-left: 8px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#applyBtn:hover {
+  background: #218838;
+}
+

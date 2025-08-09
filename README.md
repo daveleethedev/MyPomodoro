@@ -13,7 +13,7 @@ Ele não é só um timer de produtividade, é o **seu** timer: mude o wallpaper,
 ## ✨ Funcionalidades
 
 - ⏲ **Timer Pomodoro** funcional e simples de usar  
-- 🎨 **Personalização visual**: escolha tema, cores e fontes  
+- 🎨 **Personalização visual**: escolha tema, cores   
 - 🖼 **Troca de wallpaper** para o clima perfeito de foco  
 - 🔊 **Efeitos sonoros** customizáveis para início e fim de sessão  
 - 💻 **Código aberto** para você modificar e criar sua própria versão  

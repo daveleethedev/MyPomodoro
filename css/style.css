@@ -2,6 +2,10 @@
 
 /*  font-family: "Pixelify Sans", sans-serif;*/
 
+*{
+    font-family: 'Pixelify Sans';
+}
+
 body{
 background-image: url('assets/wallpaper.gif');
 background-size: cover;
@@ -11,8 +15,9 @@ width: 100vw;
 height: 100vh;
 padding: 0px;
 overflow: hidden;
- font-family: 'Pixelify Sans';
 }
+
+
 
 #hero{
     background-image: linear-gradient(to bottom right, rgba(35, 35, 82, 0.744), rgba(12, 12, 62, 0.645),rgba(78, 78, 143, 0.463));
@@ -136,15 +141,3 @@ overflow: hidden;
     color: white;
 }
 
-#config{
-    position: fixed;
-    background-color: rgb(3, 10, 51);
-    width: 700px;
-    height: 600px;
-    border-radius: 10px;
-    /*display: none;*/
-    margin: auto;
-
-    z-index: 10;
-    
-}

@@ -56,3 +56,43 @@ function restart(){
     `  
 }
 
+
+
+const fileInput = document.getElementById("fileInput");
+const applyBtn = document.getElementById("applyBtn");
+
+// Função para aplicar o wallpaper
+function setWallpaper(imageData) {
+  document.body.style.backgroundImage = `url('${imageData}')`;
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundPosition = "center";
+}
+
+// Ao carregar a página, verifica se tem wallpaper salvo
+window.addEventListener("load", () => {
+  const savedWallpaper = localStorage.getItem("wallpaper");
+  if (savedWallpaper) {
+    setWallpaper(savedWallpaper);
+  }
+});
+
+// Ao clicar no botão, aplica e salva
+applyBtn.addEventListener("click", () => {
+  const file = fileInput.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+      const imageData = e.target.result;
+      setWallpaper(imageData);
+
+      // Salva no localStorage
+      localStorage.setItem("wallpaper", imageData);
+    };
+
+    reader.readAsDataURL(file);
+  } else {
+    alert("Escolhe um wallpaper primeiro, grande galo! 🐓");
+  }
+});
