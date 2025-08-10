@@ -39,14 +39,12 @@ function displayTimer()  { //função chamada ao apertar o botão
   if ( clickCount == 2){
     console.log("segundo click")
     clearInterval(myCounter)  
-    
   }   
+  
   if (clickCount ==  3){
      myCounter = setInterval(tick, 1000);
     clickCount = 1;
   }
-
-  
 }
 
 function restart(){
@@ -99,6 +97,6 @@ applyBtn.addEventListener("click", () => {
 
     reader.readAsDataURL(file);
   } else {
-    alert("Escolhe um wallpaper primeiro, grande galo! 🐓");
+    alert("Escolhe um wallpaper primeiro, Meu galo! 🐓");
   }
 });

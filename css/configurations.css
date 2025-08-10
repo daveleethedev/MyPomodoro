@@ -1,6 +1,6 @@
 #config{
     position: fixed;
-    background-color: rgb(30, 44, 136);
+
     color: antiquewhite;
     width: 1200px;
     height: 700px;
@@ -21,7 +21,11 @@
 #closeButton{
     float: inline-end;
     margin: 10px;
-    
+    width: 30px;
+    height: 30px;
+    background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(222, 222, 230));
+    border-radius: 10px;
+    font-size: 17px;
 }
 
 #left-nav{
@@ -47,10 +51,10 @@
     background-color: #010d1ae6;
 }
 
-.ln-btn{
+.ln-btn {
     width: 50px;
     height: 50px;
-    background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(172, 172, 201));
+    background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(222, 222, 230));
     color: rgb(18, 25, 92);
     border-radius: 15px;
     margin: 10px;
@@ -60,7 +64,6 @@
     align-self: center;
     border-color: #010d1a;
 
-    
 }
 
 .config-options{

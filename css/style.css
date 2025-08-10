@@ -44,8 +44,6 @@ overflow: hidden;
     background-image: linear-gradient(to right bottom,rgba(48, 48, 126, 0.563), rgba(89, 89, 179, 0.618));
     width: 400px;
     border-radius: 30px;
-
-
 }
 
 #minutes,#seconds{
@@ -60,8 +58,6 @@ overflow: hidden;
     justify-content: center;
     margin: 10px;
 }
-
-
 
 #to-do{
     display: flex;
