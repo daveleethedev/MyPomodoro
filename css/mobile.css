@@ -1,19 +1,12 @@
 
 @media (max-width: 769px) {
     #config{
- 
-    background-color: rgb(209, 211, 224);
     width: 500px;
     height: 700px;
     /* display: none; */
-
-    
     border-radius: 10px;
-    
     z-index: 10;
-   
     transform: translate(-50%, -50%);
-    
 }
 
 #closeButton{
@@ -26,7 +19,7 @@
     float: left;
     display: flex;
     flex-direction: column;
-    background-color: black;
+   
     width: 60px;
     height: 700px;
     padding: 15px 15px -10px 15px;
@@ -41,7 +34,7 @@
 .ln-btn{
     width: 50px;
     height: 50px;
-    border-radius: 5px;
+    
     margin: 10px;
     display: flex;
     justify-content: center;
@@ -55,19 +48,5 @@
     border-radius: 0px 0px 10px 0px;
 }
 
-#sectOne{
-    background-color: rgb(222, 80, 80);
-    
-}
-
-#sectTwo{
-    background-color: blue;
-    display: none;
-}
-
-#sectThree{
-    background-color: brown;
-    display: none;
-}
 
 }

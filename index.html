@@ -10,22 +10,23 @@
         <link rel="stylesheet" href="css/uiverse.css">
         <link rel="stylesheet" href="css/configurations.css">
         <link rel="stylesheet" href="css/mobile.css">
+        <link rel="stylesheet" href="css/colorBtns.css">
 </head>
 <body>
     
     <div id="config"  >
-        <button id="closeButton" onclick="closeConfig()">X</button>
+        <button id="closeButton" onclick="closeConfig()">X </button>
         <div id="left-nav">
             <button onclick="showStyle()" id="style" class="ln-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brush-icon lucide-brush"><path d="m11 10 3 3"/><path d="M6.5 21A3.5 3.5 0 1 0 3 17.5a2.62 2.62 0 0 1-.708 1.792A1 1 0 0 0 3 21z"/><path d="M9.969 17.031 21.378 5.624a1 1 0 0 0-3.002-3.002L6.967 14.031"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brush-icon lucide-brush"><path d="m11 10 3 3"/><path d="M6.5 21A3.5 3.5 0 1 0 3 17.5a2.62 2.62 0 0 1-.708 1.792A1 1 0 0 0 3 21z"/><path d="M9.969 17.031 21.378 5.624a1 1 0 0 0-3.002-3.002L6.967 14.031"/></svg>
             </button>
 
             <button onclick="showTimer()" id="timer-config" class="ln-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-timer-icon lucide-timer"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-timer-icon lucide-timer"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>
             </button>
 
             <button onclick="showSound()" id="sound" class="ln-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume2-icon lucide-volume-2"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume2-icon lucide-volume-2"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
             </button>
         </div>
 
@@ -33,12 +34,12 @@
 
             <section id="sectOne" class="config-options">
                 <h1 align="center">Personalização</h1>
-                 <p>Cor Sólida: </p>
+                 <h3>Cor Sólida: </h3>
                   <label class="color-picker">
                     <input type="color">
                   </label>
                 <br>
-                <p>Walpaper:</p>
+                <h3>Walpaper:</h3>
                  <label class="file-label">
                      🖼 Escolher wallpaper
                     <input id="fileInput" type="file" accept=".png, .jpg, .jpeg, .gif, .webp, .bmp">
@@ -50,15 +51,21 @@
 
 
                 <br>
-                <p>Temas Do Mp:</p>
+                <h3>Temas Do Mp:</h3>
                 <ul>
-                     <button>Azul</button>
-                     <button>Verde</button>
-                     <button>Amarelo</button>
-                     <button>Vermelho</button>
-                     <button>Rosa</button>
-                     <button>Escuro</button>
-                     <button>Claro</button>
+                     <button onclick="blueTheme()" id="blueBtn" class="colorBtn">Azul</button>
+
+                     <button onclick="" id="greenBtn" class="colorBtn">Verde</button>
+
+                     <button id="yellowBtn" class="colorBtn">Amarelo</button>
+
+                     <button id="redBtn" class="colorBtn">Vermelho</button>
+
+                     <button id="pinkBtn" class="colorBtn">Rosa</button>
+
+                     <button id="darkBtn" class="colorBtn">Escuro</button>
+                     
+                     <button id="whiteBtn" class="colorBtn">Claro</button>
                 </ul> 
             </section>
 

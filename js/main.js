@@ -7,7 +7,7 @@ let container = document.querySelector(".container")
 function displayTimer()  { //função chamada ao apertar o botão
   
 
-  let timeLimit = 15;
+  let timeLimit = 1;
 
   clickCount ++;
 
@@ -45,6 +45,8 @@ function displayTimer()  { //função chamada ao apertar o botão
      myCounter = setInterval(tick, 1000);
     clickCount = 1;
   }
+
+  
 }
 
 function restart(){
@@ -66,6 +68,10 @@ function setWallpaper(imageData) {
   document.body.style.backgroundImage = `url('${imageData}')`;
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundPosition = "center";
+  
+  document.getElementById("config").style.backgroundImage = `url('${imageData}')`;
+  document.getElementById("config").style.backgroundSize = "cover";
+  document.getElementById("config").style.backgroundPosition = "center";
 }
 
 // Ao carregar a página, verifica se tem wallpaper salvo
