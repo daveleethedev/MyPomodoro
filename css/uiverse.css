@@ -3,7 +3,7 @@
     padding: 12.5px 30px;
     border: 0;
     border-radius: 100px;
-    background-color: #2ba8fb;
+    background-color: #021b2d;
     color: #ffffff;
     font-weight: Bold;
     transition: all 0.5s;
@@ -14,8 +14,12 @@
     width: 70px;
 }
 
+.opt-btn > a{
+   color: #8fa9fe;
+}
+
 .opt-btn:hover {
-  background-color: #6fc5ff;
+  background-color: #acd0e7;
   box-shadow: 0 0 20px #6fc5ff50;
   transform: scale(1.1);
   
@@ -25,7 +29,7 @@
 
 
 .opt-btn:active {
-  background-color: #3d94cf;
+  background-color: #7ec1ee;
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
   box-shadow: none;
@@ -39,7 +43,7 @@
 so that it is smooth among other more minor things */
 /* From uiverse.io by @Ali-Tahmazi99 */
 #pauseAndPlay,#restart {
-  background-color: #246e9f;
+  background-color: #021b2d;
  display: inline-block;
  width: 100px;
  height: 50px;
@@ -67,12 +71,12 @@ so that it is smooth among other more minor things */
 
 #pauseAndPlay::before,#restart::before {
  left: -10px;
- background: #a58fb9;
+ background: #331251;
 }
 
 #pauseAndPlay::after,#restart::after {
  right: -10px;
- background: #5a189a;
+ background: #40027e;
 }
 
 #pauseAndPlay:hover::before,#restart:hover::before,

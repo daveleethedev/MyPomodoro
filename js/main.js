@@ -2,7 +2,7 @@ let clickCount = 0;
 let myCounter;
 let seconds = 0;
 let minutes = 0;
-let container = document.querySelector(".container")
+let container = document.querySelector("#container")
   
 function displayTimer()  { //função chamada ao apertar o botão
   
