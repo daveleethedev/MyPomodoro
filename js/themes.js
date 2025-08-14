@@ -2,9 +2,10 @@ let hero = document.getElementById("hero");
 let config = document.getElementById("config-section");
 let containerDiv = document.getElementById("container");
 let todo = document.getElementById("to-do");
+let min = document.getElementById("minutes")
+let seg = document.getElementById("seconds")
 
-
-// ================== Temas ==================
+// ================== Temas ================== //
 function blueTheme(){
     localStorage.setItem("selectedTheme", "blue");
 
@@ -12,7 +13,8 @@ function blueTheme(){
     config.style.backgroundColor = '#010d1ae6';
     containerDiv.style.backgroundImage = 'linear-gradient(to right bottom, rgba(48, 48, 126, 0.563), rgba(89, 89, 179, 0.618))';
     todo.style.backgroundImage = 'linear-gradient(to right bottom, rgba(48, 48, 126, 0.621), rgba(89, 89, 179, 0.725))';
-    containerDiv.style.color = '#bb1414ff;'
+    min.style.color = '#fff'
+    seg.style.color = '#fff'
 }
 
 function greenTheme(){
@@ -20,7 +22,7 @@ function greenTheme(){
 
     hero.style.backgroundImage = 'linear-gradient(to bottom right, rgba(11, 149, 29, 0.74), rgba(29, 211, 16, 0.65), rgba(21, 110, 15, 0.46))';
     config.style.backgroundColor = '#085406e6';
-    containerDiv.style.backgroundImage = 'linear-gradient(to right bottom, rgba(16, 90, 23, 0.563), rgba(57, 179, 64, 0.618))';
+    containerDiv.style.backgroundImage = 'linear-gradient(to right bottom, rgba(10, 179, 27, 0.56), rgba(33, 194, 41, 0.62))';
     todo.style.backgroundImage = 'linear-gradient(to right bottom, rgba(16, 90, 23, 0.621), rgba(57, 179, 64, 0.725))';
 }
 
@@ -58,8 +60,8 @@ function darkTheme(){
     config.style.backgroundColor = '#000000e6';
     containerDiv.style.backgroundImage = 'linear-gradient(to right bottom, rgba(20, 20, 20, 0.6), rgba(60, 60, 60, 0.7))';
     todo.style.backgroundImage = 'linear-gradient(to right bottom, rgba(30, 30, 30, 0.6), rgba(80, 80, 80, 0.7))';
-
-    containerDiv.style.color = '#fafafaff;'
+    min.style.color = '#fff'
+    seg.style.color = '#fff'
 }
 
 function whiteTheme(){
@@ -67,8 +69,8 @@ function whiteTheme(){
 
     hero.style.backgroundImage = 'linear-gradient(to bottom right, rgba(255, 247, 247, 0.46), rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.51))';
     config.style.backgroundColor = '#7a7a7a81';
-    containerDiv.style.backgroundImage = 'linear-gradient(to right bottom, rgba(230, 230, 230, 0.6), rgba(255, 255, 255, 0.7))';
-    todo.style.backgroundImage = 'linear-gradient(to right bottom, rgba(245, 245, 245, 0.6), rgba(255, 255, 255, 0.8))';
+    containerDiv.style.backgroundImage = 'linear-gradient(to right bottom, rgba(198, 173, 173, 0.83), rgba(174, 152, 152, 0.7))';
+    todo.style.backgroundImage = 'linear-gradient(to right bottom, rgba(173, 173, 173, 0.84), rgba(162, 162, 162, 0.82))';
 }
 
 // ================== Restaurar tema salvo ==================
@@ -83,3 +85,56 @@ window.addEventListener("load", () => {
     else if (savedTheme === "black") darkTheme();
     else if (savedTheme === "light") whiteTheme();
 });
+
+const fileInput = document.getElementById("fileInput");
+const applyBtn = document.getElementById("applyBtn");
+
+const colorBg = document.getElementById("colorInput")
+const solidBtn = document.getElementById("solidColorBtn")
+
+
+//Função para aplicar a cor sólida 
+function setBackgroundColor(){
+    
+}
+
+// Função para aplicar o wallpaper
+function setWallpaper(imageData) {
+  document.body.style.backgroundImage = `url('${imageData}')`;
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundPosition = "center";
+  
+  document.getElementById("config").style.backgroundImage = `url('${imageData}')`;
+  document.getElementById("config").style.backgroundSize = "cover";
+  document.getElementById("config").style.backgroundPosition = "center";
+}
+
+// Ao carregar a página, verifica se tem wallpaper salvo
+window.addEventListener("load", () => {
+  const savedWallpaper = localStorage.getItem("wallpaper");
+  if (savedWallpaper) {
+    setWallpaper(savedWallpaper);
+  }
+});
+
+// Ao clicar no botão, aplica e salva
+applyBtn.addEventListener("click", () => {
+  const file = fileInput.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+      const imageData = e.target.result;
+      setWallpaper(imageData);
+
+      // Salva no localStorage
+      localStorage.setItem("wallpaper", imageData);
+    };
+
+    reader.readAsDataURL(file);
+  } else {
+    alert("Escolhe um wallpaper primeiro, Meu galo! 🐓");
+  }
+});
+

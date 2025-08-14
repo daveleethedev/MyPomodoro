@@ -7,7 +7,7 @@ let container = document.querySelector("#container")
 function displayTimer()  { //função chamada ao apertar o botão
   
 
-  let timeLimit = 1;
+  let timeLimit = 15;
 
   clickCount ++;
 
@@ -20,6 +20,7 @@ function displayTimer()  { //função chamada ao apertar o botão
 
     if (minutes >= timeLimit){
       clearInterval(myCounter)
+      
     }
 
     let secDisplay = seconds < 10 ? "0" + seconds : seconds;
@@ -32,16 +33,19 @@ function displayTimer()  { //função chamada ao apertar o botão
     }
 
   if ( clickCount == 1){
-    console.log("primeiro clique")
+    console.log("Começou O Timer")
       myCounter = setInterval(tick, 1000);
+      var audio = new Audio('yipiee.mp3');
+      audio.play();
   }
 
   if ( clickCount == 2){
-    console.log("segundo click")
+    console.log("Pausou O Timer")
     clearInterval(myCounter)  
   }   
   
   if (clickCount ==  3){
+    console.log("Continuou o timer")
      myCounter = setInterval(tick, 1000);
     clickCount = 1;
   }
@@ -57,46 +61,3 @@ function restart(){
 }
 
 
-
-const fileInput = document.getElementById("fileInput");
-const applyBtn = document.getElementById("applyBtn");
-
-// Função para aplicar o wallpaper
-function setWallpaper(imageData) {
-  document.body.style.backgroundImage = `url('${imageData}')`;
-  document.body.style.backgroundSize = "cover";
-  document.body.style.backgroundPosition = "center";
-  
-  document.getElementById("config").style.backgroundImage = `url('${imageData}')`;
-  document.getElementById("config").style.backgroundSize = "cover";
-  document.getElementById("config").style.backgroundPosition = "center";
-}
-
-// Ao carregar a página, verifica se tem wallpaper salvo
-window.addEventListener("load", () => {
-  const savedWallpaper = localStorage.getItem("wallpaper");
-  if (savedWallpaper) {
-    setWallpaper(savedWallpaper);
-  }
-});
-
-// Ao clicar no botão, aplica e salva
-applyBtn.addEventListener("click", () => {
-  const file = fileInput.files[0];
-
-  if (file) {
-    const reader = new FileReader();
-
-    reader.onload = function(e) {
-      const imageData = e.target.result;
-      setWallpaper(imageData);
-
-      // Salva no localStorage
-      localStorage.setItem("wallpaper", imageData);
-    };
-
-    reader.readAsDataURL(file);
-  } else {
-    alert("Escolhe um wallpaper primeiro, Meu galo! 🐓");
-  }
-});
