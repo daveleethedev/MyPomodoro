@@ -20,6 +20,8 @@ function displayTimer()  { //função chamada ao apertar o botão
 
     if (minutes >= timeLimit){
       clearInterval(myCounter)
+      var audio = new Audio('js/audio/yipiee.mp3');
+      audio.play();
       
     }
 
@@ -35,15 +37,14 @@ function displayTimer()  { //função chamada ao apertar o botão
   if ( clickCount == 1){
     console.log("Começou O Timer")
       myCounter = setInterval(tick, 1000);
-      var audio = new Audio('yipiee.mp3');
-      audio.play();
-  }
 
+  }
   if ( clickCount == 2){
     console.log("Pausou O Timer")
     clearInterval(myCounter)  
+    var audio = new Audio('js/audio/za warudo.mp3');
+    audio.play();
   }   
-  
   if (clickCount ==  3){
     console.log("Continuou o timer")
      myCounter = setInterval(tick, 1000);

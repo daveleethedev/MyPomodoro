@@ -116,16 +116,14 @@ overflow: hidden;
 
 
 #list-item{
-   
     width: 400px;
-    height: 45px;
-    
+    height: 25px;
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     border-radius: 10px;
     font-size: 20px;
     color: rgb(255, 255, 255);
-     
+    
 }
 
 #deleteBtn{

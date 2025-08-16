@@ -38,10 +38,10 @@ function yellowTheme(){
 function redTheme(){
     localStorage.setItem("selectedTheme", "red");
 
-    hero.style.backgroundImage = 'linear-gradient(to bottom right, rgba(178, 34, 34, 0.8), rgba(220, 20, 60, 0.7), rgba(139, 0, 0, 0.6))';
+    hero.style.backgroundImage = 'linear-gradient(to bottom right, rgba(105, 19, 19, 0.8), rgba(161, 26, 53, 0.8), rgba(197, 30, 30, 0.6))';
     config.style.backgroundColor = '#8b0000e6';
     containerDiv.style.backgroundImage = 'linear-gradient(to right bottom, rgba(139, 0, 0, 0.5), rgba(220, 20, 60, 0.6))';
-    todo.style.backgroundImage = 'linear-gradient(to right bottom, rgba(139, 0, 0, 0.6), rgba(220, 20, 60, 0.7))';
+    todo.style.backgroundImage = 'linear-gradient(to right bottom, rgba(79, 5, 5, 0.6), rgba(220, 20, 60, 0.7))';
 }
 
 function pinkTheme(){
