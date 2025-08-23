@@ -4,7 +4,7 @@
 
 ## 🎯 Sobre o projeto
 O **myPomodoro** é um **relógio Pomodoro totalmente personalizável**.  
-Ele não é só um timer de produtividade, é o **seu** timer: mude o wallpaper, tema, fonte, efeitos sonoros e até use o código para criar a sua própria versão.
+Ele não é só um timer de produtividade, é o **seu** timer: mude o wallpaper, tema, fonte, efeitos sonoros ou até use o código para criar a sua própria versão.
 
 > Produtividade não precisa ser chata. deixe a do seu jeito! 🎨
 
