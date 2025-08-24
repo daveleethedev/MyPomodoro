@@ -3,17 +3,18 @@ let myCounter;
 let seconds = 0;
 let minutes = 0;
 let container = document.querySelector("#container")
+let timeLimit = 5;
   
 function displayTimer()  { //função chamada ao apertar o botão
   
 
-  let timeLimit = 15;
+  
 
   clickCount ++;
 
     function tick() { // Contador
     seconds++;
-    if (seconds >= 60){
+    if (seconds >= 10){
         minutes++;
         seconds = 0;
     }
@@ -58,7 +59,12 @@ function restart(){
   container.innerHTML = `    
     <div id="minutes"> 00:</div>
     <div id="seconds"> 00</div>
-    `  
+    ` 
+    if(minutes < timeLimit){
+      var audio = new Audio('js/audio/omg bruh.mp3');
+    audio.play();
+    }
+    
 }
 
 
