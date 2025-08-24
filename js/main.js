@@ -3,7 +3,7 @@ let myCounter;
 let seconds = 0;
 let minutes = 0;
 let container = document.querySelector("#container")
-let timeLimit = 5;
+let timeLimit = 15;
   
 function displayTimer()  { //função chamada ao apertar o botão
   
@@ -14,7 +14,7 @@ function displayTimer()  { //função chamada ao apertar o botão
 
     function tick() { // Contador
     seconds++;
-    if (seconds >= 10){
+    if (seconds >= 60){
         minutes++;
         seconds = 0;
     }

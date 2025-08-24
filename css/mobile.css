@@ -2,9 +2,15 @@
 @media (max-width: 769px) {
 
     #body{
-        width: 769px;
+        max-width: 500px;
+
         padding: 0px;
         margin: 0px;
+
+        overflow-y: hidden;
+        overflow-x: hidden;
+        overflow: hidden;
+        position: fixed;
     }
 
     #hero{
@@ -97,6 +103,17 @@
     height: 300px;
     
 }
+
+#to-do:hover{
+    box-shadow: 0 0 20px #6fc5ff91;
+    transform: scale(1.0);
+  
+}
+
+
+#list{
+    width: 350px;
+}
 #add-item-btn{
     width: 46px;
     height: 47px;
@@ -110,7 +127,7 @@
 
 li{
     width: 300px;
-    height: 23px;
+    
     padding: 10px;
     margin: 5px;
     border-radius: 10px;
