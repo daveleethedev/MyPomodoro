@@ -46,6 +46,7 @@
 #config-section{
     padding: 10px;
     background-color: #010d1ae6;
+     transition: 0.5s;
 }
 
 .ln-btn {
@@ -72,10 +73,12 @@
 
 #sectTwo{
     display: none;
+    transition: 0.5s;
 }
 
 #sectThree{
     display: none;
+    transition: 0.5s;
 }
 
 input[type="color"] {

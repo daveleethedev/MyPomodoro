@@ -3,10 +3,11 @@
     let itens = JSON.parse(localStorage.getItem("todoList")) || [];
     itens.forEach(texto => adicionaItem(texto, false));
   };
+      let input = document.getElementById("todoInput");
 
   function adicionaItem(valor = null, salvar = true) {
     document.getElementById("warning").style.display = "none"
-    let input = document.getElementById("todoInput");
+
     let list = document.getElementById("list");
     let texto = valor ?? input.value.trim();
 
@@ -47,12 +48,24 @@
     if (salvar) {
       let itens = JSON.parse(localStorage.getItem("todoList")) || [];
       itens.push(texto);
+      
       localStorage.setItem("todoList", JSON.stringify(itens));
     }
 
     input.value = "";
     input.focus();
   }
+
+  input.addEventListener("keydown", (e) => {
+
+  if (e.code === "NumpadEnter" ){
+    adicionaItem()
+  }
+
+})
+
+
+
 
   function removeDoStorage(texto) {
     let itens = JSON.parse(localStorage.getItem("todoList")) || [];

@@ -6,10 +6,6 @@ let container = document.querySelector("#container")
 let timeLimit = 15;
   
 function displayTimer()  { //função chamada ao apertar o botão
-  
-
-  
-
   clickCount ++;
 
     function tick() { // Contador
@@ -53,6 +49,7 @@ function displayTimer()  { //função chamada ao apertar o botão
   }
 }
 
+
 function restart(){
   minutes = 0
   seconds = 0
@@ -66,5 +63,6 @@ function restart(){
     }
     
 }
+
 
 
