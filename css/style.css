@@ -154,3 +154,28 @@ li{
     display: block;
 
 }
+
+#danforden{
+    position: fixed;
+    display: none;
+    z-index: 10;
+    float:right;
+    left: 84%;
+    top: 63%;
+    width: 300px;
+    animation: toasty 2s ease-in-out;
+}
+
+@keyframes toasty {
+    0%{
+        left: 100%;
+        
+    }
+    50%{
+        left: 85%;
+    }
+    100%{
+        left: 100%;
+        display: none;
+    }
+}

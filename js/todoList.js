@@ -6,6 +6,20 @@
       let input = document.getElementById("todoInput");
 
   function adicionaItem(valor = null, salvar = true) {
+
+    let audio = new Audio("js/audio/toasty.mp3")
+    audio.play()
+
+    let danforden = document.getElementById("danforden")
+
+    danforden.style.display = "block"
+
+    let toasty = setTimeout( () => {
+      danforden.style.display = "none"
+    },2000)
+
+   
+    
     document.getElementById("warning").style.display = "none"
 
     let list = document.getElementById("list");
