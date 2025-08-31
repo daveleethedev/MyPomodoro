@@ -2,67 +2,102 @@ let clickCount = 0;
 let myCounter;
 let seconds = 0;
 let minutes = 0;
-let container = document.querySelector("#container")
-let timeLimit = 15;
-  
-function displayTimer()  { //função chamada ao apertar o botão
-  clickCount ++;
+let container = document.querySelector("#container");
 
-    function tick() { // Contador
-    seconds++;
-    if (seconds >= 60){
-        minutes++;
-        seconds = 0;
-    }
+let timeLimit = 25;   // tempo de foco (em minutos)
+let breakTime = 5;    // tempo de descanso (em minutos)
 
-    if (minutes >= timeLimit){
-      clearInterval(myCounter)
+let isBreak = false;  // controla se está em descanso ou estudando
+
+const limitEl = document.getElementById("timeLimit");
+
+function renderTimeLimit() {
+  if (limitEl) limitEl.textContent = isBreak ? breakTime : timeLimit;
+}
+
+function resetTimer() {
+  seconds = 0;
+  minutes = 0;
+}
+
+function tick() {
+  seconds++;
+  if (seconds >= 60) {
+    minutes++;
+    seconds = 0;
+  }
+
+  // pega o limite dependendo do estado
+  let currentLimit = isBreak ? breakTime : timeLimit;
+
+  if (minutes >= currentLimit) {
+    clearInterval(myCounter);
+
+    if (!isBreak) {
+      console.log("⏸️ Foco terminou! Iniciando descanso...");
       var audio = new Audio('js/audio/yipiee.mp3');
       audio.play();
-      
+      isBreak = true;   // troca para descanso
+    } else {
+      console.log("✅ Descanso terminou! Voltando pro foco...");
+      var audio = new Audio('js/audio/omg bruh.mp3');
+      audio.play();
+      isBreak = false;  // volta pro foco
     }
 
-    let secDisplay = seconds < 10 ? "0" + seconds : seconds;
-    let minDisplay = minutes < 10 ? "0" + minutes : minutes;
-
-    container.innerHTML = `    
-    <div id="minutes"> ${minDisplay}:</div>
-    <div id="seconds"> ${secDisplay}</div>
-    `  
-    }
-
-  if ( clickCount == 1){
-    console.log("Começou O Timer")
-      myCounter = setInterval(tick, 1000);
-
+    resetTimer();
+    renderTimeLimit();
+    myCounter = setInterval(tick, 1000); // reinicia o ciclo
   }
-  if ( clickCount == 2){
-    console.log("Pausou O Timer")
-    clearInterval(myCounter)  
+
+  let secDisplay = seconds < 10 ? "0" + seconds : seconds;
+  let minDisplay = minutes < 10 ? "0" + minutes : minutes;
+
+  container.innerHTML = `
+    <div id="minutes">${minDisplay}:</div>
+    <div id="seconds">${secDisplay}</div>
+  `;
+}
+
+function displayTimer() {
+  clickCount++;
+
+  if (clickCount == 1) {
+    console.log("▶️ Começou o Timer");
+    myCounter = setInterval(tick, 1000);
+  } else if (clickCount == 2) {
+    console.log("⏸️ Pausou o Timer");
+    clearInterval(myCounter);
     var audio = new Audio('js/audio/za warudo.mp3');
     audio.play();
-  }   
-  if (clickCount ==  3){
-    console.log("Continuou o timer")
-     myCounter = setInterval(tick, 1000);
+  } else if (clickCount == 3) {
+    console.log("⏯️ Continuou o Timer");
+    myCounter = setInterval(tick, 1000);
     clickCount = 1;
   }
 }
 
-
-function restart(){
-  minutes = 0
-  seconds = 0
-  container.innerHTML = `    
-    <div id="minutes"> 00:</div>
-    <div id="seconds"> 00</div>
-    ` 
-    if(minutes < timeLimit){
-      var audio = new Audio('js/audio/omg bruh.mp3');
-    audio.play();
-    }
-    
+function restart() {
+  resetTimer();
+  container.innerHTML = `
+    <div id="minutes">00:</div>
+    <div id="seconds">00</div>
+  `;
+  isBreak = false; // volta pro modo de foco
+  renderTimeLimit();
 }
 
+// funções pra alterar o tempo de foco
+function setLimit(v) {
+  timeLimit = Number(v);
+  if (!isBreak) renderTimeLimit(); // só mostra se tiver em foco
+}
 
+function fifteen() { setLimit(15); }
+function twenty() { setLimit(20); }
+function twentyFive() { setLimit(25); }
+function thirty() { setLimit(30); }
+function thirtyFive() { setLimit(35); }
 
+// render inicial
+renderTimeLimit();

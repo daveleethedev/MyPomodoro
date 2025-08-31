@@ -74,8 +74,8 @@ overflow: hidden;
 }
 
 #to-do:hover{
-      box-shadow: 0 0 20px #6fc5ff91;
-  transform: scale(1.1);
+    box-shadow: 0 0 20px #6fc5ff91;
+    transform: scale(1.1);
   
 }
 
@@ -163,7 +163,7 @@ li{
     left: 84%;
     top: 63%;
     width: 300px;
-    animation: toasty 2s ease-in-out;
+    animation: toasty 2s ;
 }
 
 @keyframes toasty {
@@ -179,3 +179,12 @@ li{
         display: none;
     }
 }
+
+
+p#timeLinfo{
+    font-size: 25px;
+    color: #fafafa;
+    position: fixed;
+    left: 5%;
+}
+

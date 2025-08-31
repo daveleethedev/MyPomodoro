@@ -1,0 +1,19 @@
+.limitTimeBtn{
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: rgb(37, 67, 240);
+    color: white;
+    border-style: solid;
+    border-color: blue;
+    margin: 5px;
+    transition: 60ms;
+    width: 90px;
+    height: 60px;
+}
+
+.limitTimeBtn:hover{
+    box-shadow: 0 0 20px #89c7f091;
+    transform: scale(1.1);
+    transition: 60ms;
+}

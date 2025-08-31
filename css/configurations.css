@@ -1,10 +1,11 @@
 #config{
     position: fixed;
+    display: none; 
 
     color: antiquewhite;
     width: 1200px;
     height: 700px;
-    display: none; 
+   
     border-radius: 10px;
     z-index: 10;
     top: 50%;
@@ -23,9 +24,10 @@
     margin: 10px;
     width: 30px;
     height: 30px;
-    background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(222, 222, 230));
-    border-radius: 10px;
+    background-image: radial-gradient(circle, rgba(86, 126, 187, 0.637), rgb(255, 255, 255));
+    border-radius: 5px;
     font-size: 17px;
+    
 }
 
 #left-nav{

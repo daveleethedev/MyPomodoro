@@ -33,8 +33,29 @@ function showSound(){
 
 }
 
+let showPainelBtn = document.getElementById("showPainel")
+let closePainelBtn = document.getElementById("closePainel")
+let painel = document.getElementById("painel")
 
 
 
 
+function showPainel(){
 
+    
+      painel.style.display = "block"
+      showPainelBtn.style.display = "none"
+      closePainelBtn.style.display = "block"
+
+      
+    
+  }
+
+function closePainel(){
+   
+      painel.style.display = "none"
+      showPainelBtn.style.display = "block"
+      closePainelBtn.style.display = "none"
+
+  
+}

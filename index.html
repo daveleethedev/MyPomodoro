@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/configurations.css" />
     <link rel="stylesheet" href="css/mobile.css" />
     <link rel="stylesheet" href="css/colorBtns.css" />
+    <link rel="stylesheet" href="css/timeConfig.css">
 
     <link rel="shortcut icon" href="rand.png" type="image/x-icon" />
   </head>
@@ -135,8 +136,12 @@
         <section id="sectTwo" class="config-options">
           <h1 align="center">Configurar Timer</h1>
 
-          
-
+          <h3>Tempo Limíte:</h3>
+          <button class="limitTimeBtn" onclick="fifteen()">15 Min</button>
+          <button class="limitTimeBtn" onclick="twenty()">20 Min</button>
+          <button class="limitTimeBtn" onclick="twentyFive()">25 Min</button>
+          <button class="limitTimeBtn" onclick="thirty()">30 Min</button>
+          <button class="limitTimeBtn" onclick="thirtyFive()">35 Min</button>
 
         </section>
 
@@ -147,6 +152,7 @@
     </div>
 
     <div id="hero" >
+
       <nav id="options" >
         <button class="opt-btn" id="tradution-btn">
           <!--Botão de tradução-->
@@ -215,6 +221,12 @@
           </a>
         </button>
       </nav>
+
+      
+          <p id="timeLinfo">Time Limit: <span id="timeLimit"></span></p>
+        
+
+
       <main>
         <section id="timer">
           <div id="container">
