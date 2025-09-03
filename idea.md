@@ -18,5 +18,5 @@
 ## Ricing:
 - Você escolhe o wallpaper que quiser
 - você escolhe a cor que quiser
-- você escolhe a fonte que quiser
-- Você escolhe o efeito sonoro que quiser
+- você escolhe a fonte que quiser v 2.0
+- Você escolhe o efeito sonoro que quiser v 20

@@ -2,6 +2,8 @@ let hero = document.getElementById("hero");
 let config = document.getElementById("config-section");
 let containerDiv = document.getElementById("container");
 let todo = document.getElementById("to-do");
+let min = document.getElementById("minutes")
+let seg = document.getElementById("seconds")
 
 // ================== Temas ================== //
 function blueTheme(){
@@ -72,9 +74,8 @@ function whiteTheme(){
 }
 
 // ================== Restaurar tema salvo ==================
-let savedTheme = localStorage.getItem("selectedTheme");
 window.addEventListener("load", () => {
-    
+    let savedTheme = localStorage.getItem("selectedTheme");
 
     if (savedTheme === "blue") blueTheme();
     else if (savedTheme === "green") greenTheme();
@@ -83,12 +84,7 @@ window.addEventListener("load", () => {
     else if (savedTheme === "pink") pinkTheme();
     else if (savedTheme === "black") darkTheme();
     else if (savedTheme === "light") whiteTheme();
- 
-
 });
- document.getElementById("themeInfo").innerHTML = savedTheme
-
-
 
 const fileInput = document.getElementById("fileInput");
 const applyBtn = document.getElementById("applyBtn");
@@ -111,10 +107,6 @@ function setWallpaper(imageData) {
   document.getElementById("config").style.backgroundImage = `url('${imageData}')`;
   document.getElementById("config").style.backgroundSize = "cover";
   document.getElementById("config").style.backgroundPosition = "center";
-
-  document.getElementById("painel").style.backgroundImage = `url('${imageData}')`;
-  document.getElementById("painel").style.backgroundSize = "cover";
-  document.getElementById("painel").style.backgroundPosition = "center";
 }
 
 // Ao carregar a página, verifica se tem wallpaper salvo
@@ -138,11 +130,9 @@ applyBtn.addEventListener("click", () => {
 
       // Salva no localStorage
       localStorage.setItem("wallpaper", imageData);
-    };
-
+    }
     reader.readAsDataURL(file);
   } else {
     alert("Escolhe um wallpaper primeiro, Meu galo! 🐓");
   }
 });
-

@@ -4,7 +4,7 @@ let seconds = 0;
 let minutes = 0;
 let container = document.querySelector("#container");
 
-let timeLimit = 25;   // tempo de foco (em minutos)
+let timeLimit = 15;   // tempo de foco (em minutos)
 let breakTime = 5;    // tempo de descanso (em minutos)
 
 let isBreak = false;  // controla se está em descanso ou estudando

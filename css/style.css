@@ -26,6 +26,7 @@ overflow: hidden;
     padding: 0px;
     border-radius: 10px;
     margin: 0px;
+    transition: 1s;
    
 }
 
