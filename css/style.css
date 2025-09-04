@@ -27,7 +27,6 @@ overflow: hidden;
     border-radius: 10px;
     margin: 0px;
     transition: 1s;
-   
 }
 
 #options{
@@ -66,8 +65,6 @@ overflow: hidden;
     align-items: center;
     margin: auto;
     border-radius: 10px;
-    
-
     width: 600px;
     height: 480px;
     background-image: linear-gradient(to right bottom,rgba(48, 48, 126, 0.621), rgba(89, 89, 179, 0.725));
@@ -77,10 +74,7 @@ overflow: hidden;
 #to-do:hover{
     box-shadow: 0 0 20px #6fc5ff91;
     transform: scale(1.1);
-  
 }
-
-
 
 #input-area{
     padding: 10px;
@@ -182,10 +176,57 @@ li{
 }
 
 
-p#timeLinfo{
+#timeLinfo{
     font-size: 25px;
     color: #fafafa;
     position: fixed;
     left: 5%;
 }
 
+
+.langBtn{
+   padding: 12.5px 30px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #8fa9fe;
+    color:#021b2d;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    width: 120px;
+    height: 120;
+    font-size: 20px;
+  
+}
+
+
+.langBtn:hover{
+  background-color: #acd0e7;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+  
+}
+
+
+.langChooseSection{
+    
+    background-color: #021b2d;
+    display: none;
+    z-index: 10;
+    position: fixed;
+    left: 40%;
+    top: 10%;
+    align-items: center;
+    gap: 5px;
+    width: 400px;
+    height: 90px;
+    border-radius: 20px;
+}
+
+#langChooseSectionBtns{
+    display: flex;
+    margin: 10px;
+}
