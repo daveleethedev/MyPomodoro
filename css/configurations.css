@@ -1,15 +1,17 @@
 #config{
     position: fixed;
-    
+    /* display: none; */
 
     color: antiquewhite;
-    width: 1200px;
-    height: 700px;
+    width: 900px;
+    height: 200px;
    
     border-radius: 10px;
     z-index: 10;
-    top: 50%;
+    top: 20%;
     left: 50%;
+    
+    justify-content: center;
     transform: translate(-50%, -50%);
     background-image: url(assets/wallpaper.gif);
     background-attachment: fixed;
@@ -34,7 +36,7 @@
     float: left;
     display: flex;
     flex-direction: column;
-    background-color: #010d1ae6;
+    background-color: #01204117;
     width: 70px;
     height: 700px;
     padding: 15px 15px -10px 15px;
@@ -47,8 +49,9 @@
 
 #config-section{
     padding: 10px;
-    background-color: #010d1ae6;
+    background-color: #03193198;
      transition: 0.5s;
+     border-radius: 10px;
 }
 
 #image-icon{
@@ -82,11 +85,14 @@ margin: auto;
 #sectTwo{
     display: none;
     transition: 0.5s;
+    border-radius: 10px;
 }
 
 #sectThree{
     display: none;
     transition: 0.5s;
+    border-radius: 10px;
+
     
 }
 
@@ -148,7 +154,7 @@ input[type="file"] {
   height: 50px;
   width: 80px;
   position: fixed;
-  left: 41%;
+  left: 21%;
   top: 28%;
    transition: 50ms;
 }
@@ -159,3 +165,4 @@ input[type="file"] {
   box-shadow: 0 0 20px #6fc5ff50;
   transform: scale(1.1);
 }
+

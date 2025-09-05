@@ -1,11 +1,4 @@
-let configDiv = document.getElementById("config");
 
-function showConfig(){
-  configDiv.style.display = "block";
-}
-function closeConfig(){
-  configDiv.style.display = "none";
-}
 
 let sectOne = document.getElementById("sectOne");
 let sectTwo = document.getElementById("sectTwo");
@@ -32,21 +25,6 @@ function showSound(){
 
 }
 
-let showPainelBtn = document.getElementById("showPainel");
-let closePainelBtn = document.getElementById("closePainel");
-let painel = document.getElementById("painel");
-
-function showPainel(){
-      painel.style.display = "block";
-      showPainelBtn.style.display = "none";
-      closePainelBtn.style.display = "block"   ;
-}
-
-function closePainel(){
-      painel.style.display = "none";
-      showPainelBtn.style.display = "block";
-      closePainelBtn.style.display = "none";
-}
 
 
  const langOptionsBtn = document.getElementById('translate_btn');
@@ -60,6 +38,20 @@ function closePainel(){
       langOptions.style.display = 'none';  // Oculta o conteúdo
     }
   });
+
+
+  const configBtn = document.getElementById('config-btn');
+  const configSect = document.getElementById('config');
+
+  configBtn.addEventListener('click', function() {
+
+    if (configSect.style.display === 'none') {
+      configSect.style.display = 'block'; // Mostra o conteúdo
+    } else {
+        configSect.style.display = 'none';  // Oculta o conteúdo
+    }
+  });
+
 
 
   // 

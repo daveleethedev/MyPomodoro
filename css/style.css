@@ -17,8 +17,6 @@ padding: 0px;
 overflow: hidden;
 }
 
-
-
 #hero{
     background-image: linear-gradient(to bottom right, rgba(35, 35, 82, 0.744), rgba(12, 12, 62, 0.645),rgba(78, 78, 143, 0.463));
     width: 99vw;
