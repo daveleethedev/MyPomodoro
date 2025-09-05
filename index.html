@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="css/timeConfig.css">
 
     <link rel="shortcut icon" href="rand.png" type="image/x-icon" />
+
+
+  <!-- Google fonts Styles -->
+
   </head>
   <body>
     <div id="config">
@@ -84,51 +88,49 @@
       </div>
 
       <div id="config-section">
+
+
         <section id="sectOne" class="config-options">
           <h1 align="center">Personalização</h1>
 
           <h3>Walpaper:</h3>
           <label class="file-label">
-            🖼 Escolher wallpaper
+            Escolher Arquivo
+            <svg id="image-icon"  xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-image-plus-icon lucide-image-plus"><path d="M16 5h6"/><path d="M19 2v6"/><path d="M21 11.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7.5"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/><circle cx="9" cy="9" r="2"/></svg>
+            <br>
+             
             <input
               id="fileInput"
               type="file"
               accept=".png, .jpg, .jpeg, .gif, .webp, .bmp"
             />
           </label>
-          <br />
-          <br />
-          <button id="applyBtn">Aplicar Wallpaper</button>
+          
+          <button id="applyBtn">Aplicar</button>
 
           <br />
           <h3>Temas Do Mp:</h3>
           <ul class="colorButtons">
             <button onclick="blueTheme()" id="blueBtn" class="colorBtn">
-              Azul
+              
             </button>
 
             <button onclick="greenTheme()" id="greenBtn" class="colorBtn">
-              Verde
             </button>
 
             <button onclick="yellowTheme()" id="yellowBtn" class="colorBtn">
-              Amarelo
             </button>
 
             <button onclick="redTheme()" id="redBtn" class="colorBtn">
-              Vermelho
             </button>
 
             <button onclick="pinkTheme()" id="pinkBtn" class="colorBtn">
-              Rosa
             </button>
 
             <button onclick="darkTheme()" id="darkBtn" class="colorBtn">
-              Escuro
             </button>
 
             <button onclick="whiteTheme()" id="whiteBtn" class="colorBtn">
-              Claro
             </button>
 
           </ul>
@@ -147,11 +149,17 @@
         </section>
 
         <section id="sectThree" class="config-options">
-          <h1 align="center">Som</h1>
+          <h1 align="center">Informações</h1>
 
-          <h3>Efeitos Sonoros: <span class="soundOff"></span></h3>
+          <h3 style="display: flex; justify-content: center; padding: 30px; width: 400px; text-align: center;  margin: auto;" >O MyPomodoro é um Aplicativo de pomodoro Pra Te Ajudar A Estudar e Focar,  Mas Nele Você Personaliza Como Quiser.O Código é "noob-friendly" pois é feito pra iniciantes darem fork e fazerem suas próprias versões com seu próprio código ele tem explicação de cada coisa no código pra vc conseguir editar do seu jeito</h3>
           
+          <footer  style="position: fixed; top: 70%; left: 10%;">
+            <h3>Versão: v1.0 </h3>
+            <h3>Stack: HTML5, ES6 (Javascript), CSS3.</h3>
+            <h3>Made with ❤️ By DaveLee</h3>
+          </footer>
         </section>
+
       </div>
     </div>
 
@@ -332,4 +340,5 @@
     <script src="js/themes.js"></script>
     <script src="js/todoList.js"></script>
   </body>
-</html>
+
+  </html>

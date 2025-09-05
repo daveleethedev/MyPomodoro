@@ -1,6 +1,6 @@
 #config{
     position: fixed;
-    display: none; 
+    
 
     color: antiquewhite;
     width: 1200px;
@@ -51,6 +51,12 @@
      transition: 0.5s;
 }
 
+#image-icon{
+  display: flex;
+margin: auto;
+
+}
+
 .ln-btn {
     width: 50px;
     height: 50px;
@@ -81,6 +87,7 @@
 #sectThree{
     display: none;
     transition: 0.5s;
+    
 }
 
 input[type="color"] {
@@ -119,13 +126,18 @@ input[type="file"] {
   color: white;
   border-radius: 6px;
   cursor: pointer;
+   transition: 50ms;
 }
 
 .file-label:hover {
   background: #187bcd;
+   background-color: #acd0e7;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+   transition: 50ms;
 }
 
-#applyBtn, #solidColorBtn {
+#applyBtn {
   padding: 8px 16px;
   margin-left: 8px;
   background: #28a745;
@@ -133,8 +145,17 @@ input[type="file"] {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  height: 50px;
+  width: 80px;
+  position: fixed;
+  left: 41%;
+  top: 28%;
+   transition: 50ms;
 }
 
 #applyBtn:hover {
   background: #218838;
+  transition: 50ms;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
 }
