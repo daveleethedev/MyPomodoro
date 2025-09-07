@@ -17,7 +17,7 @@ function showTimer(){
     sectThree.style.display = "none";
 }
 
-function showSound(){
+function showInfo(){
  
     sectThree.style.display = "block";
     sectTwo.style.display = "none";

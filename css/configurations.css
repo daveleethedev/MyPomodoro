@@ -1,50 +1,45 @@
 #config{
     position: fixed;
-    /* display: none; */
+     display: none; 
 
     color: antiquewhite;
     width: 900px;
-    height: 200px;
+    height: 700px;
    
     border-radius: 10px;
     z-index: 10;
-    top: 20%;
+    top: 50%;
     left: 50%;
     
     justify-content: center;
     transform: translate(-50%, -50%);
     background-image: url(assets/wallpaper.gif);
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
     border-radius: 10px;
     box-shadow: #010d1a;
     box-sizing: 15px;
     
 }
 
-#closeButton{
-    float: inline-end;
-    margin: 10px;
-    width: 30px;
-    height: 30px;
-    background-image: radial-gradient(circle, rgba(86, 126, 187, 0.637), rgb(255, 255, 255));
-    border-radius: 5px;
-    font-size: 17px;
-    
+.colorButtons{
+    margin-left: 40px;
 }
 
 #left-nav{
     float: left;
     display: flex;
     flex-direction: column;
-    background-color: #01204117;
+    background-color: #052fa186;
     width: 70px;
-    height: 700px;
+    height: 200px;
     padding: 15px 15px -10px 15px;
-    margin: 0px 10px 0px 0px;    
+    margin:  0px 10px 0px 0px;
     border-style: solid;
     border-width: 2px 5px 2px 2px;
     border-color: #010d1a;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px
 }
 
 #config-section{
@@ -52,6 +47,28 @@
     background-color: #03193198;
      transition: 0.5s;
      border-radius: 10px;
+     height: 700px;
+
+}
+
+#appInfo{
+  width: 700px;
+  text-align: center;
+  margin-top:  0px;
+  margin-left: 100px;
+}
+
+#randMentioned{
+  width: 300px;
+  margin-left: 200px;
+  padding: 0px;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 50px;
 }
 
 #image-icon{
@@ -63,8 +80,8 @@ margin: auto;
 .ln-btn {
     width: 50px;
     height: 50px;
-    background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(222, 222, 230));
-    color: rgb(18, 25, 92);
+    background-image: radial-gradient(circle, rgb(61, 52, 136), rgb(8, 8, 27));
+    color: rgb(220, 227, 253);
     border-radius: 15px;
     margin: 10px;
     display: flex;
@@ -92,8 +109,6 @@ margin: auto;
     display: none;
     transition: 0.5s;
     border-radius: 10px;
-
-    
 }
 
 input[type="color"] {
@@ -146,21 +161,19 @@ input[type="file"] {
 #applyBtn {
   padding: 8px 16px;
   margin-left: 8px;
-  background: #28a745;
+  background: #4e34e4;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  height: 50px;
-  width: 80px;
-  position: fixed;
-  left: 21%;
-  top: 28%;
+  height: 40px;
+  width: 115px;
+
    transition: 50ms;
 }
 
 #applyBtn:hover {
-  background: #218838;
+  background: #0e78be;
   transition: 50ms;
   box-shadow: 0 0 20px #6fc5ff50;
   transform: scale(1.1);
