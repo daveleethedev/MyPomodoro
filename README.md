@@ -29,7 +29,7 @@ Ele não é só um timer de produtividade, é o **seu** timer: mude o wallpaper,
 
 ---
 
-## 🚀 Como usar
+## 🚀 Como Fazer o Meu?
 
 1. **Clone este repositório**
    ```bash
@@ -37,14 +37,7 @@ Ele não é só um timer de produtividade, é o **seu** timer: mude o wallpaper,
 
 2. **Modifique o que quiser e depois sobe na sua conta**
 <br>
-3. **As Pastas Estão Dividídas assim:**
 
-<div align="center">
-<img  src="pasteGuide.png" >
-</div>
-
-<br>
-<hr>
 
 <div align="center">
 <img src="rand.png" >

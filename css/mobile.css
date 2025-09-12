@@ -26,6 +26,17 @@
         display: none;
     }
 
+    #config{
+        width: 400px;
+    }
+
+    #bgExample{
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        margin-left: 8px;
+    }
+
 
 /* ESTILIZAÇÃO DE TUDO GERAL  */
 
@@ -89,14 +100,11 @@ li{
   margin-left: 8px;
   background: #28a745;
   color: white;
-  border: none;
+  
   border-radius: 6px;
   cursor: pointer;
   height: 50px;
   width: 80px;
-  position: fixed;
-  left: 66%;
-  top: 28%;
    transition: 50ms;
 }
 
@@ -120,9 +128,7 @@ li{
   cursor: pointer;
   height: 50px;
   width: 80px;
-  position: fixed;
-  left: 41%;
-  top: 28%;
+
    transition: 50ms;
 }
 

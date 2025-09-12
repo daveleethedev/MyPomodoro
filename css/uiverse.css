@@ -12,10 +12,18 @@
     justify-content: center;
     margin: 5px;
     width: 70px;
+    
 }
 
-.opt-btn > a{
-   color: #8fa9fe;
+.opt-btn  {
+
+  & a, span{
+    color: #8fa9fe;
+  }
+
+
+   
+    
 }
 
 .opt-btn:hover {
